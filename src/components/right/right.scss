@@ -1,0 +1,98 @@
+@import "../../style.scss";
+
+
+.rightbar
+{
+    @include themify($themes){
+    flex: 3;
+    
+        position: sticky;
+        top: 70px;
+        height: calc(100vh - 70px);
+        overflow: scroll;
+        
+            color: themed("textColor");
+        
+            background-color: themed("bgSoft");
+        &::-webkit-scrollbar {
+            display: none;
+        }
+                  @include mobile {
+                      display: none;
+                  }
+                                  @include tablet {
+                                      display: none;
+                                  }
+        .container
+        {
+            padding: 20px;
+            .item{
+                background-color: themed("bg");
+                  -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        padding: 20px 15px;
+        margin-bottom: 20px;
+                span{
+                    color: themed("textColorSoft");
+                }
+                .user{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 20px 0px;
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    position: relative;
+                    img{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    .online{
+                        height: 12px;
+                        width: 12px;
+                        background-color: limegreen;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0;
+                        left: 30px;
+                    }
+                    p{
+                        color: gray;
+                        
+                    }
+                   span{
+                    font-weight: 500;
+                    color: themed("textColor");
+                   }
+                }
+                .buttons{
+                     display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    button{
+                        border: none;
+                        color: white;
+                        padding: 5px;
+                        cursor: pointer;
+                                    &:first-child {
+                background-color: #5271ff;
+              }
+
+              &:last-child {
+                background-color: #f0544f;
+              }
+                    }
+         
+                }
+            
+            }
+           
+            }
+        }
+}
+}
